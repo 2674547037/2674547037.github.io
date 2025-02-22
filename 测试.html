@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>优惠券页面</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn1">点击复制口令1</button>
+  <button id="btn2">点击复制口令2</button>
+  <button id="btn3">点击复制口令3</button>
+
+  <script>
+    // 定义优惠券链接
+    const link1 = "2674547037";
+    const link2 = "2674547037";
+    const link3 = "2674547037";
+
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const btn3 = document.getElementById('btn3');
+
+    btn1.addEventListener('click', function () {
+      navigator.clipboard.writeText(link1).then(() => {
+        alert('优惠券链接1已复制');
+      }).catch(err => {
+        console.error('无法复制: ', err);
+      });
+    });
+
+    btn2.addEventListener('click', function () {
+      navigator.clipboard.writeText(link2).then(() => {
+        alert('优惠券链接2已复制');
+      }).catch(err => {
+        console.error('无法复制: ', err);
+      });
+    });
+
+    btn3.addEventListener('click', function () {
+      navigator.clipboard.writeText(link3).then(() => {
+        alert('优惠券链接3已复制');
+      }).catch(err => {
+        console.error('无法复制: ', err);
+      });
+    });
+  </script>
+</body>
+
+</html>
+ 
